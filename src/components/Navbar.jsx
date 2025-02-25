@@ -1,12 +1,14 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import "./Navbar.scss"
 
 const Navbar = () => {
     return (
-        <>
-            <Link to={"/"}>Home</Link>
-            <Link to={"/movies"}>Movies</Link>
-            <Link to={"/serials"}>Serials</Link>
-        </>
+        <nav className='navbar'>
+            <NavLink className={({isActive})=> isActive ? "activeLink link" : "nonActive link"} to={"/"}>Home</NavLink>
+            <NavLink className={({isActive})=> isActive ? "activeLink link" : "nonActive link"} to={"/movies"}>Movies</NavLink>
+            <NavLink className={({isActive})=> isActive ? "activeLink link" : "nonActive link"} to={"/serials"}>Serials</NavLink>
+            <NavLink className={({isActive})=> isActive ? "activeLink link" : "nonActive link"} to={"/all-movies"}>All Movies</NavLink>
+        </nav>
     );
 };
 
