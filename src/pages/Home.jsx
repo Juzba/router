@@ -1,20 +1,5 @@
-import { Link } from 'react-router-dom';
-
 const Home = () => {
-    return (
-        <section>
-            <h2>Home</h2>
-            <ul>
-                <li>Home</li>
-                <li>
-                    <Link to='/movies'>Movies</Link>
-                </li>
-                <li>
-                    <Link to='/serials'>Serials</Link>
-                </li>
-            </ul>
-        </section>
-    );
+    return <h1>Vítejte na Hlavní stránce</h1>;
 };
 
 export default Home;
