@@ -4,11 +4,13 @@ import Navbar from '../components/Navbar';
 
 const SharedLayout = () => {
     return (
-        <>
-            <Navbar />
-            <Outlet />
-            <Footer />
-        </>
+        <header>
+            <nav>
+                <Navbar />
+                <Outlet />
+                <Footer />
+            </nav>
+        </header>
     );
 };
 
