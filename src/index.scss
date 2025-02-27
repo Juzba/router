@@ -1,8 +1,12 @@
+@use "./scss/MainVariables.scss";
+
+
 :root {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 
-    background-color: #141414;
-    color: aliceblue;
+    background-color: MainVariables.$background-color;
+    color: MainVariables.$text-color;
+    
 }

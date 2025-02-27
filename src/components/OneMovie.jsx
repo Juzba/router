@@ -1,5 +1,7 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import data from "../data";
+import "./OneMovie.scss"
+
 
 const OneMovie = () => {
 	const { movieId } = useParams();
@@ -7,13 +9,13 @@ const OneMovie = () => {
 	const newData = data.find(({ id }) => id == movieId);
 
     	return newData ? (
-		<div>
-			<h1>One Film</h1>
+			<div className="onemovie">
+			<h2>{newData.title}</h2>
 			<img src={newData.image}></img>
-			<h3>{newData.title}</h3>
 			<p>{newData.age}</p>
 			<p>{newData.tags}</p>
 			<p>{newData.description}</p>
+			<Link to={"/movies"}>Zpět na všechny filmy</Link>
 		</div>
 	) : (
 		<h2>Film nenalezen</h2>

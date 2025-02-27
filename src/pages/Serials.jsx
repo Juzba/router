@@ -1,5 +1,5 @@
 const Serials = () => {
-    return <h2>Serials</h2>;
+    return <h2 style={{margin: "20px"}}>Serials</h2>;
 };
 
 export default Serials;

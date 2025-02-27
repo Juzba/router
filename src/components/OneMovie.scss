@@ -1,0 +1,29 @@
+@use '../scss/MainVariables.scss';
+
+.onemovie {
+    width: min-content;
+    margin: 0px auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    padding: 25px;
+    border: 1px solid MainVariables.$primary-color;
+    h2{
+        margin-top: 0;
+    }
+
+    img {
+        width: min-content;
+    }
+
+    a{
+        font-size: 25px;
+        color: adjust-color(MainVariables.$text-color, $lightness: 30%);
+        text-decoration: none;
+    }
+
+    p{
+        text-align: center;
+    }
+}

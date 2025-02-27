@@ -1,27 +1,24 @@
-$primary-color: red;
-$text-color: white;
+@use '../scss/MainVariables.scss';
 
 .movies {
     width: 90%;
-    
+    margin: 0 20px;
+
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 15px;
-    
-    .film-box {
-        box-sizing:border-box;
-        box-shadow: 0 0 10px $primary-color;
-        width: 310px;
-        height: 390px;
-        padding: 15px;
-        cursor: pointer;
-        transition: all 1s ease;
-        color: $text-color;
-        text-decoration: none;
 
-        &:hover{
-            box-shadow: 0 0 15px wheat;
+    .film-box {
+        box-sizing: border-box;
+        width: 310px;
+        padding: 15px;
+        transition: all 1s ease;
+
+        background: linear-gradient(45deg, MainVariables.$background-color, black);
+
+        &:hover {
+            box-shadow: 0 0 25px MainVariables.$primary-color;
         }
 
         img {
@@ -30,7 +27,16 @@ $text-color: white;
             width: 285px;
             height: 155px;
             overflow: hidden;
-            box-shadow:none;
+            box-shadow: none;
+        }
+
+        a {
+            cursor: pointer;
+            // color:  MainVariables.$text-color;
+            color: lighten(MainVariables.$text-color, 30%);
+            text-decoration: none;
+            padding: 5px 10px;
+            background-color: black;
         }
     }
 }
